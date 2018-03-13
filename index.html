@@ -1,0 +1,187 @@
+<!-- 
+Static html page to populate.
+PRE-BOOTSTRAP -- haven't used it in a 
+bit, so I may have messed up the class
+names.
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="css/FILENAME.css">
+	
+	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+		
+	<!--
+	Idk if you're going to want this in the header or
+	at the bottom of the body. Shouldn't matter for now.
+	-->
+	<script src="js/FILENAME.js"></script>
+	
+</head>
+<body>
+
+	<div class="header-container">
+		<div class="dropdown-container"></div>
+		<div class="legend-container"></div>
+	</div>
+	
+	<!--
+	Keeping the id's generic. Here's a list 
+	of the expected visuals:
+		1. On time order acknowledgment (%) -- bar
+		2. On time shipping window (%) -- bar
+		3. Order fill rate (%) -- bar
+		4. ASN fill rate (%) -- bar
+		5. PO line item accuracy (%) -- bar
+		6. ASN line item accuracy (%) -- bar
+		7. On time and complete (%) -- bar
+		8. Charge-backs -- table
+		
+	Note: I expect the ids & classes will change. 
+	This should be helpful to get started.
+	-->
+	<div class="container">
+	
+		<div class="row">
+			<div class="col-sm">
+			<div id="plot1" class="barchart"></div>
+			</div>
+			
+			<div class="col-sm">
+			<div id="stats1" class="stats"></div>
+			</div>
+			
+			<div class="col-sm">
+			<div id="gage1" class="gage"></div>
+			</div>
+			
+			<div class="col-sm">
+			<div id="summary1" class="summary"></div>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-sm">
+			<div id="plot2" class="barchart"></div>
+			</div>
+			
+			<div class="col-sm">
+			<div id="stats2" class="stats"></div>
+			</div>
+			
+			<div class="col-sm">
+			<div id="gage2" class="gage"></div>
+			</div>
+			
+			<div class="col-sm">
+			<div id="summary2" class="summary"></div>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-sm">
+			<div id="plot3" class="barchart"></div>
+			</div>
+			
+			<div class="col-sm">
+			<div id="stats3" class="stats"></div>
+			</div>
+			
+			<div class="col-sm">
+			<div id="gage3" class="gage"></div>
+			</div>
+			
+			<div class="col-sm">
+			<div id="summary3" class="summary"></div>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-sm">
+			<div id="plot4" class="barchart"></div>
+			</div>
+			
+			<div class="col-sm">
+			<div id="stats4" class="stats"></div>
+			</div>
+			
+			<div class="col-sm">
+			<div id="gage4" class="gage"></div>
+			</div>
+			
+			<div class="col-sm">
+			<div id="summary4" class="summary"></div>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-sm">
+			<div id="plot5" class="barchart"></div>
+			</div>
+			
+			<div class="col-sm">
+			<div id="stats5" class="stats"></div>
+			</div>
+			
+			<div class="col-sm">
+			<div id="gage5" class="gage"></div>
+			</div>
+			
+			<div class="col-sm">
+			<div id="summary5" class="summary"></div>
+			</div>
+			
+		</div>
+		
+		<div class="row">
+			<div class="col-sm">
+			<div id="plot6" class="barchart"></div>
+			</div>
+			
+			<div class="col-sm">
+			<div id="stats6" class="stats"></div>
+			</div>
+			
+			<div class="col-sm">
+			<div id="gage6" class="gage"></div>
+			</div>
+			
+			<div class="col-sm">
+			<div id="summary6" class="summary"></div>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-sm">
+			<div id="plot7" class="barchart"></div>
+			</div>
+			
+			<div class="col-sm">
+			<div id="stats7" class="stats"></div>
+			</div>
+			
+			<div class="col-sm">
+			<div id="gage7" class="gage"></div>
+			</div>
+			
+			<div class="col-sm">
+			<div id="summary7" class="summary"></div>
+			</div>
+		</div>
+			
+		<div class="row">
+			<div id="plot8" class="barchart"></div>
+		</div>
+	</div>
+
+	
+</body>
+</html>
