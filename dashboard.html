@@ -20,7 +20,7 @@
 		   */
 		  return rows.map(function(row) { return row[key]});
 		}
-		Plotly.d3.json("data.json", function(rows){  
+		Plotly.d3.json("https://raw.githubusercontent.com/wilulrich96/plotlyDashTest/master/data.json", function(rows){  
 		  var array = unpack(rows, 'COLUMN NAME');
 		});
 	</script>
