@@ -11,23 +11,48 @@
 	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <title>Hello, world!</title>
 	<script>
+		var supplierInfo;
+		var source = "https://raw.githubusercontent.com/wilulrich96/plotlyDashTest/master/data.json";
+		function chartLoader(supplier){
+			//checks if globabl variable loaded yet, then calls chartGenerator
+			if(supplierInfo == undefined){
+				Plotly.d3.json(source, function(rows){  
+					supplierInfo = rows;
+					chartGenerator(supplier, supplierInfo);
+				});
+			}
+			else{
+				chartGenerator(supplier, supplierInfo);
+			}
+		}
+		function chartGenerator(supplier, jsonData){
+			var data = [
+				{
+					y: [jsonData[supplier]["On-Time PO Acknowledgement"]],
+					x: [jsonData[supplier]["Supplier Name"]],
+					type: "bar"
+				}
+			];
+			var layout = {
+				title: "On-Time Order Acknowledment (%)"
+			}
+			//plot chart
+			Plotly.newPlot('myDiv', data, layout);
+		}
 		function unpack(rows, key){
-		  /*
-		   * unpack takes in data as rows and
-		   * the column desired as key (string)
-		   * then returns the data in that column
-		   * as a list.
-		   */
+			/*
+			   * unpack takes in data as rows and
+			   * the column desired as key (string)
+			   * then returns the data in that column
+			   * as a list.
+			*/
 		  return rows.map(function(row) { return row[key]});
 		}
-		Plotly.d3.json("https://raw.githubusercontent.com/wilulrich96/plotlyDashTest/master/data.json", function(rows){  
-		  var array = unpack(rows, 'COLUMN NAME');
-		});
 	</script>
   </head>
-  <body>
-    <h1>Hello, world!</h1>
-
+  <body onload="chartLoader(2)">
+    <h1>Chart Example!</h1>
+	<div id="myDiv"></div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
