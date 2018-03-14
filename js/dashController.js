@@ -13,18 +13,45 @@ function chartLoader(supplier){
 	}
 }
 function chartGenerator(supplier, jsonData){
+	createBarChart(
+		"On-Time Order Acknowledment (%)",
+		"January",
+		[jsonData[supplier]["On-Time PO Acknowledgement"]],
+		'plot1'
+	);
+	createBarChart(
+		"On-Time Shipping Window (%)",
+		"January",
+		[jsonData[supplier]["On Time PU"]],
+		'plot2'
+	);
+	createBarChart(
+		"Order Fill Rate (%)",
+		"January",
+		[jsonData[supplier]["Order Fill Rate"]],
+		'plot3'
+	);
+	createBarChart(
+		"ASN Fill Rate (%)",
+		"January",
+		[jsonData[supplier]["ASN Fill Rate"]],
+		'plot4'
+	);
+}
+function createBarChart(title, x, y, div){
 	var data = [
 		{
-			y: [jsonData[supplier]["On-Time PO Acknowledgement"]],
-			x: [jsonData[supplier]["Supplier Name"]],
+			x: x,
+			y: y,
 			type: "bar"
 		}
 	];
 	var layout = {
-		title: "On-Time Order Acknowledment (%)"
+		title: title,
+		yaxis: {range: [0,100]}
 	}
 	//plot chart
-	Plotly.newPlot('myDiv', data, layout);
+	Plotly.newPlot(div, data, layout);
 }
 function unpack(rows, key){
 	/*

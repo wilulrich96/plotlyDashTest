@@ -37,8 +37,9 @@ names.
 	<script src="js/dashController.js"></script>
 	
 </head>
-<body>
-	<div class="header-container">
+<body onload="chartLoader(2)">
+	<div class="container">
+		<h1 class="text-center">Compliance Report</h1>
 		<div class="dropdown-container"></div>
 		<div class="legend-container"></div>
 	</div>
@@ -59,76 +60,86 @@ names.
 	This should be helpful to get started.
 	-->
 	<div class="container">
-	
 		<div class="row">
-			<div class="col-sm">
+			<div class="col-sm-4">
 			<div id="plot1" class="barchart"></div>
 			</div>
 			
-			<div class="col-sm">
+			<div class="col-sm-2">
 			<div id="stats1" class="stats"></div>
 			</div>
 			
-			<div class="col-sm">
+			<div class="col-sm-2">
 			<div id="gage1" class="gage"></div>
 			</div>
 			
-			<div class="col-sm">
-			<div id="summary1" class="summary"></div>
+			<div class="col-sm-4">
+				<div id="summary1" class="summary">
+				<h3>
+				Measures whether or not Supplier released a PO for shipping at least 72 hours before the 7-11 requested pickup date
+				</h3>
+				</div>
 			</div>
 		</div>
 		
 		<div class="row">
-			<div class="col-sm">
+			<div class="col-sm-4">
 			<div id="plot2" class="barchart"></div>
 			</div>
 			
-			<div class="col-sm">
+			<div class="col-sm-2">
 			<div id="stats2" class="stats"></div>
 			</div>
 			
-			<div class="col-sm">
+			<div class="col-sm-2">
 			<div id="gage2" class="gage"></div>
 			</div>
 			
-			<div class="col-sm">
+			<div class="col-sm-4">
 			<div id="summary2" class="summary"></div>
+			<h3>Measures if Supplier releases POs for shipping with a requeste</h3>
 			</div>
 		</div>
 		
 		<div class="row">
-			<div class="col-sm">
+			<div class="col-sm-4">
 			<div id="plot3" class="barchart"></div>
 			</div>
 			
-			<div class="col-sm">
+			<div class="col-sm-2">
 			<div id="stats3" class="stats"></div>
 			</div>
 			
-			<div class="col-sm">
+			<div class="col-sm-2">
 			<div id="gage3" class="gage"></div>
 			</div>
 			
-			<div class="col-sm">
+			<div class="col-sm-4">
 			<div id="summary3" class="summary"></div>
+			<h3>Total number of accurate items delivered that meet SEDC’s specifications /
+Total number of items ordered on Purchase Order </h3>
 			</div>
 		</div>
 		
 		<div class="row">
-			<div class="col-sm">
+			<div class="col-sm-4">
 			<div id="plot4" class="barchart"></div>
 			</div>
 			
-			<div class="col-sm">
+			<div class="col-sm-2">
 			<div id="stats4" class="stats"></div>
 			</div>
 			
-			<div class="col-sm">
+			<div class="col-sm-2">
 			<div id="gage4" class="gage"></div>
 			</div>
 			
-			<div class="col-sm">
+			<div class="col-sm-4">
 			<div id="summary4" class="summary"></div>
+			<h3>
+			Total number of accurate items delivered that meet SEDC’s specifications /
+Total number of items acknowledged by Supplier through Portal
+			</h3>
 			</div>
 		</div>
 		
