@@ -37,11 +37,34 @@ names.
 	<script src="js/dashController.js"></script>
 	
 </head>
-<body onload="chartLoader(2)">
+<body onload="chartLoader(0)">
 	<div class="container">
-		<h1 class="text-center">Compliance Report</h1>
+		<div class="jumbotron">
+		<h2 class="text-center">Compliance Report</h2>
+		<form>
+			<div class="form-group row">
+				<label for="supplierSelect" class="col-sm-2 col-form-label">Supplier:</label>
+				<select class="custom-select col-sm-4" id="supplierSelect" onchange="chartLoader(this.value)">
+					<option selected value="0">Chicken Nugget Vendor</option>
+					<option value="1">Pizza Place</option>
+					<option value="2">Smoothie Supply</option>
+					<option value="3">Paper Products Inc</option>
+					<option value="4">Deli Meats Inc</option>
+				</select>
+			</div>
+			<div class="form-group row">
+				<label for="monthSelect" class="col-sm-2 col-form-label">Month:</label>
+				<select class="custom-select col-sm-4" id="monthSelect">
+					<option selected value="1">January</option>
+					<option value="2">February</option>
+					<option value="3">March</option>
+				</select>
+			</div>
+		</form>
+		<!--
 		<div class="dropdown-container"></div>
 		<div class="legend-container"></div>
+		</div>-->
 	</div>
 	
 	<!--
@@ -97,7 +120,7 @@ names.
 			
 			<div class="col-sm-4">
 			<div id="summary2" class="summary"></div>
-			<h3>Measures if Supplier releases POs for shipping with a requeste</h3>
+			<h3>Measures if Supplier releases POs for shipping with a requested ship date</h3>
 			</div>
 		</div>
 		
