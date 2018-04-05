@@ -35,6 +35,8 @@ names.
 	at the bottom of the body. Shouldn't matter for now.
 	-->
 	<script src="js/dashController.js"></script>
+	<!--adding css sheet-->
+	<link rel="stylesheet" type="text/css" href="css/index-style.css">
 	
 </head>
 <body onload="chartLoader(0)">
@@ -83,17 +85,33 @@ names.
 	This should be helpful to get started.
 	-->
 	<div class="container">
-		<div class="row">
+		<div class="row metric-div">
 			<div class="col-sm-4">
 			<div id="plot1" class="barchart"></div>
 			</div>
 			
 			<div class="col-sm-2">
-			<div id="stats1" class="stats"></div>
+				<div id="stats1" class="stats">
+					<table class="table table-bordered">
+						<tbody>
+							<tr>
+								<th>Current Month</th>
+								<td>90</td>
+							</tr>
+							<tr>
+								<th>Target</th>
+								<td>99.9</td>
+							</tr>						
+						</tbody>
+					</table>
+				</div>
 			</div>
 			
 			<div class="col-sm-2">
-			<div id="gage1" class="gage"></div>
+				<div id="gage1" class="gage text-center">
+					<h2>55/78</h2>
+					Supplier Ranking
+				</div>
 			</div>
 			
 			<div class="col-sm-4">
@@ -105,7 +123,7 @@ names.
 			</div>
 		</div>
 		
-		<div class="row">
+		<div class="row metric-div">
 			<div class="col-sm-4">
 			<div id="plot2" class="barchart"></div>
 			</div>
@@ -124,7 +142,7 @@ names.
 			</div>
 		</div>
 		
-		<div class="row">
+		<div class="row metric-div">
 			<div class="col-sm-4">
 			<div id="plot3" class="barchart"></div>
 			</div>
@@ -144,7 +162,7 @@ Total number of items ordered on Purchase Order </h3>
 			</div>
 		</div>
 		
-		<div class="row">
+		<div class="row metric-div">
 			<div class="col-sm-4">
 			<div id="plot4" class="barchart"></div>
 			</div>
@@ -166,7 +184,7 @@ Total number of items acknowledged by Supplier through Portal
 			</div>
 		</div>
 		
-		<div class="row">
+		<div class="row metric-div">
 			<div class="col-sm">
 			<div id="plot5" class="barchart"></div>
 			</div>
@@ -185,7 +203,7 @@ Total number of items acknowledged by Supplier through Portal
 			
 		</div>
 		
-		<div class="row">
+		<div class="row metric-div">
 			<div class="col-sm">
 			<div id="plot6" class="barchart"></div>
 			</div>
@@ -203,7 +221,7 @@ Total number of items acknowledged by Supplier through Portal
 			</div>
 		</div>
 		
-		<div class="row">
+		<div class="row metric-div">
 			<div class="col-sm">
 			<div id="plot7" class="barchart"></div>
 			</div>

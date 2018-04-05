@@ -41,15 +41,25 @@ function chartGenerator(supplier, jsonData){
 function createBarChart(title, x, y, div){
 	var data = [
 		{
-			x: x,
-			y: y,
-			type: "bar"
+			x: y,
+			y: x,
+			type: "bar",
+			orientation: "h"
 		}
 	];
 	var layout = {
 		title: title,
-		yaxis: {range: [0,100]}
-	}
+		xaxis: {range: [0,100]},
+		height:150,
+		width:350,
+		margin: {
+			l: 50,
+			r: 50,
+			b: 25,
+			t: 25,
+			pad: 4
+		}
+	};
 	//plot chart
 	Plotly.newPlot(div, data, layout);
 }
